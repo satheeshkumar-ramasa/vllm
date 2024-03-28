@@ -18,8 +18,10 @@ RUN apt install -y git
 # Install ray_vllm_inference from Github
 RUN pip install "ray_vllm_inference @ git+https://github.com/asprenger/ray_vllm_inference"
 
+RUN pip install git+https://gitlab.dell.com/services/cto/digital-humans/digitalhuman-virtual-assistant/digitalhuman-vllm.git@branch_or_tag#egg=package_name
+
 # Expose ports
-EXPOSE 8000
+EXPOSE 9000
 EXPOSE 8265
 
 # Start the serve application

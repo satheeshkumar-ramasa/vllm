@@ -68,7 +68,7 @@ def main(host:str, port:int, stream:bool, user_message:str, max_tokens:int,
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--host", type=str, default="localhost")
-    parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument("--port", type=int, default=9000)
     parser.add_argument("--system-message", type=str, default="You are a helpful and truthful assistant.")
     parser.add_argument("--user-message", type=str, default="What can I do on a weekend trip to London?")
     parser.add_argument("--max-tokens", type=int, default=512)
