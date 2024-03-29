@@ -46,7 +46,7 @@ setup(
     license_files="LICENSE.txt",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
-    url="https://github.com/asprenger/ray_vllm_inference",
+    url="https://github.com/satheeshkumar-ramasa/vllm",
     keywords=["python", "vllm", "ray", "llm"],
     platforms= ["linux"],
     classifiers=[
