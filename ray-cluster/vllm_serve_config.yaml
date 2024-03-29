@@ -15,7 +15,7 @@ applications:
     env_vars:
       HUGGING_FACE_HUB_TOKEN: hf-1234567890
     pip:
-    - ray_vllm_inference @ git+https://github.com//asprenger/ray_vllm_inference
+    - ray_vllm_inference @ git+https://github.com/satheeshkumar-ramasa/vllm
   args:
     model: facebook/opt-125m
     # Use Llama-2:
