@@ -60,13 +60,13 @@ class PromptFormat(BaseModel):
         ), "user must be a string containing '{instruction}'"
         return value
 
-    @model_validator(pre=False)
-    def check_user_system_in_user(cls, values):
-        if values["system_in_user"]:
+    @validator("system_in_user")
+    def check_user_system_in_user(cls, value, values):
+        if value:
             assert (
-                "{system}" in values["user"]
+                "{system}" in values.get("user", "")
             ), "If system_in_user=True, user must contain '{system}'"
-        return values
+        return value
 
     def generate_prompt(self, messages: Union[Prompt, List[Message]]) -> str:
         if isinstance(messages, Prompt):
