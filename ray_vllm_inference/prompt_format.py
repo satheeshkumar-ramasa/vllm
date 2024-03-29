@@ -3,7 +3,7 @@
 
 from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional, TypeVar, Union
 from typing import Any, Dict, List, Optional, Set, Tuple, Type, TypeVar, Union
-from pydantic import BaseModel, model_validator, validator
+from pydantic import BaseModel, model_validator, validator,root_validator
 import yaml
 
 T = TypeVar("T")
