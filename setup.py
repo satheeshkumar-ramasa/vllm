@@ -30,8 +30,8 @@ def get_version() -> str:
     return version
 
 requirements = [
-    "ray==2.8.0",
-    "ray[serve]==2.8.0",
+    "ray==2.9.2",
+    "ray[serve]==2.9.2",
     "pydantic==1.10.13", # fix problem with Ray Serve startup
     "vllm==0.3.2", # vLLM requires CUDA 12
     "protobuf==3.20.3",
