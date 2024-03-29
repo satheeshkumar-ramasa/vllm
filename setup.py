@@ -32,7 +32,7 @@ def get_version() -> str:
 requirements = [
     "ray==2.9.2",
     "ray[serve]==2.9.2",
-    "pydantic==1.10.13", # fix problem with Ray Serve startup
+    "pydantic==2.2.0", # fix problem with Ray Serve startup
     "vllm==0.3.2", # vLLM requires CUDA 12
     "protobuf==3.20.3",
     "torch==2.1.2"
