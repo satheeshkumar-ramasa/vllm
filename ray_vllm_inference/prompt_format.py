@@ -3,7 +3,7 @@
 
 from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional, TypeVar, Union
 from typing import Any, Dict, List, Optional, Set, Tuple, Type, TypeVar, Union
-from pydantic import BaseModel, root_validator, validator
+from pydantic import BaseModel, model_validator, validator
 import yaml
 
 T = TypeVar("T")
@@ -60,7 +60,7 @@ class PromptFormat(BaseModel):
         ), "user must be a string containing '{instruction}'"
         return value
 
-    @root_validator
+    @model_validator
     def check_user_system_in_user(cls, values):
         if values["system_in_user"]:
             assert (
