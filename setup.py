@@ -35,7 +35,7 @@ requirements = [
     "pydantic==1.10.13", # fix problem with Ray Serve startup
     "vllm==0.2.3", # vLLM requires CUDA 12
     "protobuf==3.20.3",
-    "torch==1.8.0"
+    "torch>=1.8.0,<1.9.0"
 ]
 
 setup(
